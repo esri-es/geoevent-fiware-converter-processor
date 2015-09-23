@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template>
+    <geoEventServices/>
+    <inputs>
+        <input clusterCommand="START" connector="http-genjson-in" connectorLabel="Input con transport HTTP y adapter Generic-JSON" hostName="srvfiware" label="http-SoundSantander-Telefonica-in" name="0d17136e-55a1-448c-8a34-5f7e4e1519b0" runningState="STARTED" statusDetails="NULL" supportsAllGeoEventDefinitions="true">
+            <adapter uri="com.esri.ges.adapter.inbound/Generic-JSON/10.3.1">
+                <properties>
+                    <property name="XGeometryField" type="String"></property>
+                    <property name="CustomDateFormat" type="String"></property>
+                    <property name="CreateGeoEventDefinition" type="Boolean">false</property>
+                    <property name="ExistingGeoEventDefinitionName" type="GeoEventDefinition">EjemploFiware</property>
+                    <property name="YGeometryField" type="String"></property>
+                    <property name="WKIDGeometryField" type="String"></property>
+                    <property name="WKTextGeometryField" type="String"></property>
+                    <property name="JsonObjectName" type="String">contextElement</property>
+                    <property name="NewGeoEventDefinitionName" type="String">NewFeatureGeoEventDef</property>
+                    <property name="BuildGeometryFromFields" type="Boolean">false</property>
+                    <property name="ZGeometryField" type="String"></property>
+                </properties>
+            </adapter>
+            <geoEventDefinitionHistory>
+                <guid>5eb1367e-46b0-47e4-9e87-b9af9bc5992d</guid>
+            </geoEventDefinitionHistory>
+            <geoEventsRateRange max="0.0" min="0.0"/>
+            <supportedGeoEventDefinitions/>
+            <transport uri="com.esri.ges.transport.inbound/HTTP/10.3.1">
+                <properties>
+                    <property name="clientURLProxy" type="String"></property>
+                    <property name="useClientURLProxy" type="Boolean">false</property>
+                    <property name="clientPostBody" type="String"></property>
+                    <property name="acceptableMimeTypesClientMode" type="String"></property>
+                    <property name="mode" type="String">CLIENT</property>
+                    <property name="headers" type="String"></property>
+                    <property name="httpMethod" type="String">POST</property>
+                    <property name="frequency" type="Integer">60</property>
+                    <property name="useLongPolling" type="Boolean">false</property>
+                    <property name="clientPostFrom" type="String">TEXT</property>
+                    <property name="httpTimeoutValue" type="Integer">30</property>
+                    <property name="honorLastModified" type="Boolean">false</property>
+                    <property name="clientURL" type="String"></property>
+                    <property name="postContentType" type="String"></property>
+                    <property name="acceptableMimeTypesServerMode" type="String"></property>
+                    <property name="clientParameters" type="String"></property>
+                    <property name="httpAppendToEnd" type="String"></property>
+                    <property name="clientPostParameters" type="String">name:value</property>
+                </properties>
+            </transport>
+        </input>
+    </inputs>
+    <outputs/>
+    <geoEventDefinitions>
+        <geoEventDefinition guid="5eb1367e-46b0-47e4-9e87-b9af9bc5992d" name="EjemploFiware" owner="auto-generated/com.esri.ges.adapter.inbound.Generic-JSON/10.3.1" accessType="editable">
+            <fieldDefinitions>
+                <fieldDefinition name="type" type="String" cardinality="One">
+                    <fieldDefinitions/>
+                </fieldDefinition>
+                <fieldDefinition name="isPattern" type="String" cardinality="One">
+                    <fieldDefinitions/>
+                </fieldDefinition>
+                <fieldDefinition name="id" type="String" cardinality="One">
+                    <fieldDefinitions/>
+                </fieldDefinition>
+                <fieldDefinition name="attributes" type="Group" cardinality="Many">
+                    <fieldDefinitions>
+                        <fieldDefinition name="name" type="String" cardinality="One">
+                            <fieldDefinitions/>
+                        </fieldDefinition>
+                        <fieldDefinition name="type" type="String" cardinality="One">
+                            <fieldDefinitions/>
+                        </fieldDefinition>
+                        <fieldDefinition name="value" type="String" cardinality="One">
+                            <fieldDefinitions/>
+                        </fieldDefinition>
+                        <fieldDefinition name="metadatas" type="Group" cardinality="Many">
+                            <fieldDefinitions>
+<fieldDefinition name="name" type="String" cardinality="One">
+    <fieldDefinitions/>
+</fieldDefinition>
+<fieldDefinition name="type" type="String" cardinality="One">
+    <fieldDefinitions/>
+</fieldDefinition>
+<fieldDefinition name="value" type="String" cardinality="One">
+    <fieldDefinitions/>
+</fieldDefinition>
+                            </fieldDefinitions>
+                        </fieldDefinition>
+                    </fieldDefinitions>
+                </fieldDefinition>
+            </fieldDefinitions>
+        </geoEventDefinition>
+    </geoEventDefinitions>
+    <tags/>
+    <connectors>
+        <connector accessType="editable" label="Input con transport HTTP y adapter Generic-JSON" name="http-genjson-in" type="inbound">
+            <adapter uri="com.esri.ges.adapter.inbound/Generic-JSON/10.3.1"/>
+            <defaultName>http-genjson-in</defaultName>
+            <description>Input con transport HTTP y adapter Generic-JSON</description>
+            <properties>
+                <advanced>
+                    <property label="Expected Date Format" name="CustomDateFormat" source="adapter"/>
+                    <property default="false" label="Build Geometry From Fields" name="BuildGeometryFromFields" source="adapter"/>
+                    <property label="X Geometry Field" name="XGeometryField" source="adapter"/>
+                    <property label="Y Geometry Field" name="YGeometryField" source="adapter"/>
+                    <property label="Z Geometry Field" name="ZGeometryField" source="adapter"/>
+                    <property label="wkid Geometry Field" name="WKIDGeometryField" source="adapter"/>
+                    <property label="Well Known Text Geometry Field" name="WKTextGeometryField" source="adapter"/>
+                    <property default="false" label="Use URL Proxy" name="useClientURLProxy" source="transport"/>
+                    <property label="URL Proxy" name="clientURLProxy" source="transport"/>
+                    <property label="Post/Put body MIME Type" name="postContentType" source="transport"/>
+                    <property label="Parameters" name="clientParameters" source="transport"/>
+                    <property default="false" label="Use Long Polling" name="useLongPolling" source="transport"/>
+                    <property default="true" label="Receive New Data Only" name="honorLastModified" source="transport"/>
+                    <property label="Append to the End of Payload" name="httpAppendToEnd" source="transport"/>
+                </advanced>
+                <hidden/>
+                <shown>
+                    <property label="JSON Object Name" name="JsonObjectName" source="adapter"/>
+                    <property default="true" label="Create GeoEvent Definition" name="CreateGeoEventDefinition" source="adapter"/>
+                    <property label="GeoEvent Definition Name (Existing)" name="ExistingGeoEventDefinitionName" source="adapter"/>
+                    <property default="NewFeatureGeoEventDef" label="GeoEvent Definition Name (New)" name="NewGeoEventDefinitionName" source="adapter"/>
+                    <property default="CLIENT" label="Mode" name="mode" source="transport"/>
+                    <property label="Acceptable MIME Types (Server Mode)" name="acceptableMimeTypesServerMode" source="transport"/>
+                    <property label="URL" name="clientURL" source="transport"/>
+                    <property default="GET" label="HTTP Method" name="httpMethod" source="transport"/>
+                    <property default="TEXT" label="Post/Put From" name="clientPostFrom" source="transport"/>
+                    <property default="name:value" label="Post/Put Parameters" name="clientPostParameters" source="transport"/>
+                    <property label="Content Body" name="clientPostBody" source="transport"/>
+                    <property default="name:value" label="Header Parameter Name:Value List" name="headers" source="transport"/>
+                    <property label="Acceptable MIME Types (Client Mode)" name="acceptableMimeTypesClientMode" source="transport"/>
+                    <property default="5" label="Frequency (in seconds)" name="frequency" source="transport"/>
+                    <property default="30" label="HTTP Timeout (in seconds)" name="httpTimeoutValue" source="transport"/>
+                </shown>
+            </properties>
+            <transport uri="com.esri.ges.transport.inbound/HTTP/10.3.1"/>
+        </connector>
+    </connectors>
+</template>

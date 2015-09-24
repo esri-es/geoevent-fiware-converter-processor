@@ -1,8 +1,11 @@
 # FIWARE to ArcGIS Converter Processor
+
+#### [Readme en español](README_ES.md)
+
 The FIWARE to ArcGIS Converter Processor reads a GeoEvent with FIWARE format that has been received from a Context Broker and transforms it to a new GeoEvent with a format easily readable by the ArcGIS Platform.
 
 ## Sections
-*   Requirements
+* Requirements
 *	Building
 *	Installation
 *	Testing
@@ -17,20 +20,20 @@ The FIWARE to ArcGIS Converter Processor reads a GeoEvent with FIWARE format tha
 
 ## Building
 * Verify that Maven is installed and working correctly.
-  * From a command prompt, type mvn -version and verify that it returns the version correctly.
+  * From a command prompt, type `mvn -version` and verify that it returns the version correctly.
   *	If the Maven version is not returned correctly, consult the GeoEvent Extension SDK Developer Guide for more information on how to set up Maven.
 * Make any necessary changes to the pom.xml files to reflect the location of the GeoEvent Extension and GeoEvent Extension SDK repositories.
   *	If necessary, change the locations for the repository entries in the pom.xml.
   *	The current settings assume these will be located at:
-    * /Program Files/ArcGIS/Server/GeoEventExtension/sdk/repository
-    * /Program Files/ArcGIS/Server/GeoEventExtension/system
+    * `/Program Files/ArcGIS/Server/GeoEventExtension/sdk/repository`
+    * `/Program Files/ArcGIS/Server/GeoEventExtension/system`
 * Depending on the version of software you have installed, you may also need to change the version property in the pom.xml files.
-* From a command prompt go to the ./fiware-adaptador-geoevento-processor directory.
+* From a command prompt go to the `./fiware-adaptador-geoevento-processor directory`.
 * Type mvn install at the prompt and hit return.
 
 ## Installation
-* Browse ./fiware-adaptador-geoevento-processor/target (this directory is created when you execute mvn install).
-* Copy the .jar file from the target folder and paste it into the deploy directory on your GEP installation (ex. \deploy\ -- default location is C:\Program Files\ArcGIS\Server\GeoEventProcessor\deploy).
+* Browse `./fiware-adaptador-geoevento-processor/target` (this directory is created when you execute `mvn install`).
+* Copy the .jar file from the target folder and paste it into the deploy directory on your GEP installation (ex. `\deploy\` -- default location is `C:\Program Files\ArcGIS\Server\GeoEventProcessor\deploy`).
 
 ## Testing
 

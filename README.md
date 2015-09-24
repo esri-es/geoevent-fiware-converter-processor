@@ -9,7 +9,6 @@ The FIWARE to ArcGIS Converter Processor reads a GeoEvent with FIWARE format tha
 *	Building
 *	Installation
 *	Testing
-*	Licensing
 
 ## Requirements
 

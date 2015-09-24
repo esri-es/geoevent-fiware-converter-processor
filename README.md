@@ -70,7 +70,12 @@ In the following steps you will configure GeoEvent Processor to receive and proc
     * Source fields to adapt: list of data field names received from the FIWARE Context Broker. 
     * Target fields to adapt: list of field names from GeoEvent Definition SensorFiware that will load the information of source fields. These fields has to be the equivalent of source fields and in the same order.
     * GeoEvent to convert json from Fiware: name of the GeoEvent Definition imported (SensorFiware).
-  * Connect the components of the service.
+ 
+![Processor Properties](Processor_properties.png)
+
+  * Connect the components of the service as illustrated below:
+ 
+![Service sample](service_sample.png)
  
 * When finished click the 'Publish' button to save the service.
 * In GeoEvent Processor Manager, navigate to ‘Services’ > ‘Monitor’ and observe the GeoEvent Processor components. You should see the newly created service and it should have a status of 'Started'.
